@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.707107,-0.707107,0.707107,0.707107,-3.42809,6)">
+        <g id="Page-1">
+            <g id="Selected-members">
+                <g id="Pop-up">
+                    <g id="List">
+                        <g id="User-Item---Normal" serif:id="User-Item-/-Normal">
+                            <g id="User-Item-Atoms-CTA-Pending" serif:id="User-Item/Atoms/CTA/Pending">
+                                <g id="Icons---Close" serif:id="Icons-/-Close">
+                                    <path id="Path" d="M6.667,1.111C6.868,1.111 7.033,1.27 7.043,1.469L7.043,1.488L7.043,6.29L11.846,6.29C12.054,6.29 12.222,6.459 12.222,6.667C12.222,6.868 12.064,7.033 11.864,7.043L11.846,7.043L7.043,7.043L7.043,11.846C7.043,12.054 6.875,12.222 6.667,12.222C6.465,12.222 6.3,12.064 6.29,11.864L6.29,11.846L6.29,7.043L1.488,7.043C1.28,7.043 1.111,6.875 1.111,6.667C1.111,6.465 1.27,6.3 1.469,6.29L1.488,6.29L6.29,6.29L6.29,1.488C6.29,1.28 6.459,1.111 6.667,1.111Z" style="fill:white;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
