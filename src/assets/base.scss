@@ -2,6 +2,12 @@
 prefix: fc-
 */
 
+:root {
+    --fc-font-size-root: 14px;
+
+    font-size: var(--fc-font-size-root);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
@@ -42,7 +48,7 @@ prefix: fc-
 // @import "~bootstrap/scss/badge";
 // @import "~bootstrap/scss/alert";
 // @import "~bootstrap/scss/progress";
-// @import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/list-group";
 // @import "~bootstrap/scss/close";
 // @import "~bootstrap/scss/toasts";
 @import "~bootstrap/scss/modal";

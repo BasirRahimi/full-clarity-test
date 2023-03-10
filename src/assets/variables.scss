@@ -8,8 +8,16 @@ $primary:       $blue;
 $secondary:     #96A6BE;
 $success:       $green;
 
+$input-placeholder-color: #405069;
+$transition-base: all .2s ease-in-out;
+
 // Prefix for :root CSS variables
-$prefix: -fc;
+$prefix: fc-;
 
 // Custom variables
 $btn-primary-bg: #EFFAFF;
+
+// Modal
+$modal-close-color: #517EB9;
+$modal-body-bg: #F6F8FD;
+$modal-close-color-filter: invert(47%) sepia(13%) saturate(1850%) hue-rotate(174deg) brightness(98%) contrast(89%);
