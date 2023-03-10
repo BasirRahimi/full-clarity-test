@@ -4,10 +4,10 @@
             <div class="header">
                 <div>
                     <BaseButton @click="modal.hide()" v-if="currentStep == 'newGroup' || currentStep == 'groupCreated'">
-                        <img :src="closeIcon" alt="close new group modal" class="close">
+                        <img :src="CloseIcon" alt="close new group modal" class="close">
                     </BaseButton>
                     <BaseButton @click="prevStep" v-else-if="currentStep == 'selectMembers'">
-                        <img :src="backIcon" alt="close new group modal" class="back">
+                        <img :src="BackIcon" alt="close new group modal" class="back">
                     </BaseButton>
                 </div>
                 <h2 class="title mb-0">{{ title }}</h2>
@@ -23,8 +23,9 @@
                 <DropZone v-model="profile" class="d-flex mb-4">
                     <BaseButton class="d-inline-block m-auto position-relative p-0" @click="profileImgInput.click()">
                         <input type="file" class="d-none" @change="updateProfileImage" ref="profileImgInput">
-                        <BaseButton v-show="!!profile" @click.stop="removeProfileImg" class="remove-profile"><img :src="closeIcon" alt="remove profiel image"></BaseButton>
+                        <BaseButton v-show="!!profile" @click.stop="removeProfileImg" class="remove-profile"><img :src="CloseIcon" alt="remove profiel image"></BaseButton>
                         <img class="d-block m-auto profile" :src="profileImg" alt="group image">
+                        <img :src="FileIcon" alt="add image" class="profile-hover">
                     </BaseButton>
                 </DropZone>
                 <p class="text-secondary text-center mb-4">Drag & drop an image, or click to upload</p>
@@ -34,7 +35,7 @@
                 <Members v-model="selectedMembers" />
             </div>
             <div v-else-if="currentStep === 'groupCreated'" class="new-group">
-                <img class="d-block m-auto profile mb-4" :src="confirmationIcon" alt="group created">
+                <img class="d-block m-auto profile mb-4" :src="ConfirmationIcon" alt="group created">
                 <p class="text-secondary text-center mb-0">Group created</p>
             </div>
         </div>
@@ -48,10 +49,11 @@ import BaseModal from '@/components/base-components/BaseModal.vue';
 import BaseButton from '@/components/base-components/BaseButton.vue';
 import DropZone from '@/components/base-components/DropZone.vue';
 import Members from '@/components/Members.vue';
-import closeIcon from '@/assets/icons/Close.svg';
-import groupIcon from '@/assets/icons/Group.svg';
-import backIcon from '@/assets/icons/Back.svg';
-import confirmationIcon from '@/assets/icons/Confirmation.svg';
+import CloseIcon from '@/assets/icons/Close.svg';
+import GroupIcon from '@/assets/icons/Group.svg';
+import BackIcon from '@/assets/icons/Back.svg';
+import FileIcon from '@/assets/icons/File.svg';
+import ConfirmationIcon from '@/assets/icons/Confirmation.svg';
 
 const modal = ref();
 
@@ -80,7 +82,7 @@ const profileImgInput = ref();
 const profile = ref();
 const groupName = ref(''); 
 
-const profileImg = ref(groupIcon);
+const profileImg = ref(GroupIcon);
 
 const updateProfileImage = (e) => {
     let files = e.target.files || e.dataTransfer.files;
@@ -137,7 +139,7 @@ const title = computed(() => {
 
 const removeProfileImg = () => {
     profile.value = null;
-    profileImg.value = groupIcon;
+    profileImg.value = GroupIcon;
 }
 
 const reset = () => {
@@ -189,6 +191,7 @@ defineExpose({ show });
 
 <style lang="scss" scoped>
 @import '@/assets/variables.scss';
+
 .header {
     display: grid;
     width: 100%;
@@ -218,6 +221,24 @@ defineExpose({ show });
         height: 144px;
         object-fit: cover;
         border-radius: 50%;
+    }
+
+    img.profile-hover {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+        border-radius: 50%;
+        background-color: rgba($color: $modal-close-color, $alpha: 0.8);
+        transition: $transition-base;
+    }
+    button:hover {
+        img.profile-hover {
+            opacity: 1;
+        }
     }
 
     .remove-profile {
